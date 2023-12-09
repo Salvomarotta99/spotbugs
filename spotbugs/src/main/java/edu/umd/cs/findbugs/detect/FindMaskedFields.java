@@ -200,7 +200,7 @@ public class FindMaskedFields extends BytecodeScanningDetector {
                 // that is.
                 if (f != null) {
                     FieldAnnotation fa = FieldAnnotation.fromBCELField(getDottedClassName(), f);
-                    if (true || var.getStartPC() > 0) {
+                    if (true) {
                         bugReporter.reportBug(new BugInstance(this, "MF_METHOD_MASKS_FIELD", LOW_PRIORITY)
                                 .addClassAndMethod(this).addField(fa).addSourceLine(this, var.getStartPC() - 1));
                     }

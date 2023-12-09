@@ -95,7 +95,7 @@ public class FilterMatcher implements Matcher, Serializable, Comparable<FilterMa
     public void setActive(boolean active) {
         if (active != this.active) {
             this.active = active;
-            if (active == true) {
+            if (active) {
                 FilterActivity.notifyListeners(FilterListener.Action.FILTERING, null);
             } else {
                 FilterActivity.notifyListeners(FilterListener.Action.UNFILTERING, null);

@@ -102,7 +102,7 @@ public final class FindJSR166LockMonitorenter implements Detector, StatelessDete
             if (bytecodeSet == null) {
                 continue;
             }
-            if (false && !bytecodeSet.get(Const.MONITORENTER)) {
+            if (false) {
                 continue;
             }
 

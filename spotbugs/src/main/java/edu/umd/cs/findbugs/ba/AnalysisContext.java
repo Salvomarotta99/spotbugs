@@ -990,7 +990,7 @@ public class AnalysisContext implements AutoCloseable {
             }
         }
 
-        if (true && Subtypes2.DEBUG) {
+        if (Subtypes2.DEBUG) {
             System.out.println(getSubtypes2().getGraph().getNumVertices() + " vertices in inheritance graph");
         }
     }

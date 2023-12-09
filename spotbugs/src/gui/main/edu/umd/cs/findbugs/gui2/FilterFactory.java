@@ -64,7 +64,7 @@ public class FilterFactory {
             return makeMatcher(sortables.iterator().next());
         }
         edu.umd.cs.findbugs.filter.CompoundMatcher matcher;
-        if (andOr == true) {
+        if (andOr) {
             matcher = new AndMatcher();
         } else {
             matcher = new OrMatcher();

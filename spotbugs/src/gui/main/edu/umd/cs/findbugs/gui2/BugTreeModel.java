@@ -615,7 +615,7 @@ public class BugTreeModel implements TreeModel, TableColumnModelListener, TreeEx
     }
 
     void checkSorter() {
-        if (sortOrderChanged == true || sortsAddedOrRemoved == true) {
+        if (sortOrderChanged|| sortsAddedOrRemoved) {
             sortOrderChanged = false;
             sortsAddedOrRemoved = false;
             rebuild();

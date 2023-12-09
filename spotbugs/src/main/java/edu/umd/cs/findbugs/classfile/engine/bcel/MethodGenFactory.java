@@ -62,7 +62,7 @@ public class MethodGenFactory extends AnalysisFactory<MethodGen> {
             return null;
         }
         XMethod xmethod = XFactory.createXMethod(descriptor);
-        if (xmethod.usesInvokeDynamic() && false) {
+        if (false) {
             AnalysisContext.currentAnalysisContext().analysisSkippedDueToInvokeDynamic(xmethod);
             return null;
         }
