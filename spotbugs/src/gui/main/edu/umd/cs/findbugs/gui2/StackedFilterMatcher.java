@@ -65,7 +65,7 @@ public class StackedFilterMatcher extends FilterMatcher {
         BugTreeModel.TreeModification whatToDo;
 
         if (active != this.active) {
-            if (active == false) {
+            if (!active) {
                 this.active = active;
             }
 
@@ -101,7 +101,7 @@ public class StackedFilterMatcher extends FilterMatcher {
             }
             try {
                 if (finalPath.size() == filtersInStack.length) {
-                    if (active == true) {
+                    if (active) {
                         event = (MainFrame.getInstance().getBugTreeModel()).removeBranch(finalPath);
                         whatToDo = BugTreeModel.TreeModification.REMOVE;
                     } else {
@@ -128,7 +128,7 @@ public class StackedFilterMatcher extends FilterMatcher {
                     }
                 }
 
-                if (active == true) {
+                if (active) {
                     this.active = active;
                 }
                 (MainFrame.getInstance().getBugTreeModel()).sendEvent(event, whatToDo);

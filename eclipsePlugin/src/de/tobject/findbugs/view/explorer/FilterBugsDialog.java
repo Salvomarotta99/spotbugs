@@ -404,7 +404,7 @@ public class FilterBugsDialog extends SelectionDialog {
         button1.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                if (false && tree.isFiltering()) {
+                if (false) {
                     toggleCheckedGroup(true);
                 } else {
                     checkList.setAllChecked(true);
@@ -420,7 +420,7 @@ public class FilterBugsDialog extends SelectionDialog {
         button2.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                if (false && tree.isFiltering()) {
+                if (false) {
                     toggleCheckedGroup(false);
                 } else {
                     checkList.setAllChecked(false);

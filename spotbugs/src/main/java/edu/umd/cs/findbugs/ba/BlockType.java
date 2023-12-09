@@ -272,7 +272,7 @@ public class BlockType extends BitSet {
             StringBuilder buf = new StringBuilder();
             buf.append("N");
             for (int i = 0; i < depth; ++i) {
-                buf.append(get(i) == CATCH ? "C" : "F");
+                buf.append(get(i)? "C" : "F");
             }
             return buf.toString();
         }

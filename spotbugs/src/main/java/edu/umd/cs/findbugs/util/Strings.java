@@ -117,7 +117,7 @@ public class Strings {
      *      Language (XML) 1.0 (Fifth Edition)</a>
      */
     public static void initializeEscapeMap() {
-        if (xmlLowValueEscapeStringsInitialized == true) {
+        if (xmlLowValueEscapeStringsInitialized) {
             return;
         }
 
@@ -127,7 +127,7 @@ public class Strings {
          * warning about the thread safety of this operation)
          */
         synchronized (escapeInitLockObject) {
-            if (xmlLowValueEscapeStringsInitialized == true) {
+            if (xmlLowValueEscapeStringsInitialized) {
                 return;
             }
 
@@ -200,12 +200,12 @@ public class Strings {
      * invoked automatically the first time a string is unescaped.
      */
     public static boolean initializeUnescapePattern() {
-        if (paternIsInitialized == true) {
+        if (paternIsInitialized) {
             return true;
         }
 
         synchronized (unescapeInitLockObject) {
-            if (paternIsInitialized == true) {
+            if (paternIsInitialized) {
                 return true;
             }
 
@@ -264,7 +264,7 @@ public class Strings {
         if (s.contains("\\u")) {
             StringBuffer sUnescaped = new StringBuffer();
             Matcher m = unescapePattern.matcher(s);
-            while (m.find() == true) {
+            while (m.find()) {
                 String slashes = m.group(1);
                 String digits = m.group(3);
                 int escapeCode;
